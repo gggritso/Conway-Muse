@@ -97,8 +97,8 @@
             divs += '<br>';
           }
           $('#board').html(divs);
-          $('.cell').click(function() {
-            return toggleState(this);
+          $('#board').on('click', '.cell', function(event) {
+            return toggleState($(this));
           });
           $('#board').width(($('.cell').width() + 2) * DIM);
           seed();

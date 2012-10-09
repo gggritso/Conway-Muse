@@ -7,6 +7,8 @@
     COLORS = []
     INTERVAL = undefined
 
+    # TODO: Click listener delegation
+
 
     toggleState = ( cell ) ->
       # TODO: Figure out colours here, and always use this to toggle!
@@ -86,8 +88,8 @@
       $( '#board' ).html( divs )
 
       # Add click handlers
-      $( '.cell' ).click ->
-        toggleState( this )
+      $( '#board' ).on 'click', '.cell', ( event ) ->
+        toggleState( $( this ) )
 
       # Resize the container
       $( '#board' ).width( ( $( '.cell' ).width() + 2 ) * DIM )
