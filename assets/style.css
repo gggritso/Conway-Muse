@@ -4,29 +4,29 @@ body {
   background: #111111;
   text-align: center; }
 
-nav a {
-  text-transform: uppercase;
-  font-size: 16px; }
-
 .wrapper {
   width: 500px;
   margin: auto;
+  margin-top: 3%;
   line-height: 0px; }
 
 .cell {
-  width: 10px;
-  height: 10px;
+  width: 7px;
+  height: 7px;
   margin: 1px;
   display: inline-block;
   -webkit-transition: all 0.3s ease-in-out; }
+  @media screen and (max-width: 320px) {
+    .cell {
+      width: 5px;
+      height: 5px; } }
+  @media screen and (min-width: 1200px) {
+    .cell {
+      width: 10px;
+      height: 10px; } }
 
 .alive {
-  -webkit-box-shadow: 0 0 2px rgba(255, 255, 255, 0.2); }
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5); }
 
 #palette {
-  margin: 20px auto;
-  width: 60%; }
-  #palette div {
-    width: 20%;
-    height: 7px;
-    display: inline-block; }
+  display: none; }
